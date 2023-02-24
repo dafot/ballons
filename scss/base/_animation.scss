@@ -1,0 +1,36 @@
+
+
+//Анимация движения заголовка слева направо//
+@keyframes leftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }  
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+//Анимация движения заголовка справа налево//
+@keyframes rightToleft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+//Анимация движения и появления кнопки снизу вверх//
+@keyframes BtnToUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transofrm: translateY(0px);
+    }
+}
