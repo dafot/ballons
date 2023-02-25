@@ -255,7 +255,7 @@ body {
 }
 
 .section-about {
-  padding-top: 8rem;
+  padding: 8rem 0rem;
 }
 
 .section-adventure {
@@ -263,6 +263,10 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/adventure-bg.jpg) center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
           clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+}
+
+.section-tour {
+  padding: 21rem 0rem;
 }
 
 .header {
