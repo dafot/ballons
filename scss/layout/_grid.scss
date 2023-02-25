@@ -1,7 +1,7 @@
 
 .row {
     max-width:     $grid-width;
-    background:    #c89393;
+    
     margin:        0 auto;    
     &:not(:last-child) {
         margin-bottom: $margin-vertical-big;
@@ -35,6 +35,6 @@
         margin-right: $gutter-horizontal;
     }
     @include clearfix;
-    background: #88af7f;
+    
     float: left;
 }
