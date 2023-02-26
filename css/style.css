@@ -46,6 +46,8 @@ html {
 
 .container {
   background-color: #F7F7F7;
+  position: relative;
+  z-index: 0;
 }
 
 body {
@@ -138,6 +140,10 @@ body {
 
 .margin-bottom-50px {
   margin-bottom: 5rem;
+}
+
+.bordered {
+  border: 1px solid;
 }
 
 .btn:link, .btn:visited {
@@ -415,6 +421,83 @@ body {
   filter: blur(0.3rem) brightness(80%);
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7));
+}
+
+.book {
+  height: 50rem;
+  background: linear-gradient(111deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 59%, rgba(186, 133, 84, 0.8) 59%, rgba(161, 79, 3, 0.8) 100%), url(../img/bg-form.jpg) center/cover no-repeat;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.form {
+  width: 60%;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.form__input {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  color: #000000;
+  padding: 2rem 0rem 2rem 2rem;
+  background: #ffffff;
+  border: none;
+  border-bottom: 0.2rem solid transparent;
+  border-radius: 0.5rem;
+  width: 55%;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 0.2rem solid #66D763;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+.form__input:focus:invalid {
+  border-bottom: 0.2rem solid #D76363;
+}
+.form__label {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  transition: 0.7s all;
+}
+.form__input:-moz-placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+}
+
 .section-about {
   padding: 8rem 0rem;
 }
@@ -427,12 +510,18 @@ body {
 }
 
 .section-tour {
-  padding: 21rem 0rem;
+  padding: 12rem 0rem;
   margin-bottom: 8rem;
 }
 
 .section-feedBack {
-  padding-top: 8rem;
+  padding: 8rem 0;
+  position: relative;
+}
+
+.section-book {
+  padding: 10rem;
+  background: linear-gradient(90deg, #BA8554, #000000);
 }
 
 .header {

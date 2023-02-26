@@ -249,6 +249,11 @@
         </section>
 
         <section class="section-feedBack">
+          <div class="bg-gradient"></div>
+          <video class="bg-video" autoplay muted loop>
+            <source src="img/video-background.mp4" />
+            <source src="img/video-background.webm" />
+          </video>
           <div class="text-align-center margin-bottom-80px">
             <h2 class="title-secondary title-secondary_white">
               отзывы наших клиентов
@@ -257,9 +262,8 @@
           <div class="row">
             <div class="feedBack-card">
               <figure class="feedBack-card__img">
-                <img src="img/feedBack-1.jpg" alt="client-photo">
+                <img src="img/feedBack-1.jpg" alt="client-photo" />
                 <figcaption class="feedBack-card__name">Антон Рябин</figcaption>
-              
               </figure>
               <div class="feedBack-card__box">
                 <h3 class="title-third margin-bottom-10px">
@@ -272,20 +276,20 @@
                   образом начало повседневной работы по формированию позиции
                   влечет.
                 </p>
-              </div>              
+              </div>
             </div>
-            
           </div>
           <div class="row">
             <div class="feedBack-card">
               <figure class="feedBack-card__img">
-                <img src="img/feedBack-2.jpg" alt="client-photo">
-                <figcaption class="feedBack-card__name">Лиза Фролова</figcaption>
-              
+                <img src="img/feedBack-2.jpg" alt="client-photo" />
+                <figcaption class="feedBack-card__name">
+                  Лиза Фролова
+                </figcaption>
               </figure>
               <div class="feedBack-card__box">
                 <h3 class="title-third margin-bottom-10px">
-                  я получил массу впечатлений
+                  это было великолепно и незабываемо
                 </h3>
                 <p class="paragraph">
                   Задача организации, в особенности же дальнейшее развитие
@@ -294,9 +298,32 @@
                   образом начало повседневной работы по формированию позиции
                   влечет.
                 </p>
-              </div>              
+              </div>
             </div>
-            
+          </div>
+          <div class="text-align-center">
+            <a href="#" class="btn bordered">забронировать</a>
+          </div>
+        </section>
+        <section class="section-book">
+          <div class="row">
+            <div class="book">
+              <div class="book__form">
+                <form action="#" class="form">
+                  <div class="text-align-center margin-bottom-30px">
+                    <h2 class="title-secondary">забронировать тур</h2>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__input" type="text" placeholder="Имя Фамилия" id="name" required/>
+                    <label class="form__label" for="name" >Имя Фамилия</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__input" type="email" placeholder="Ваш email" id="email" raquired/>
+                    <label class="form__label" for="email">Ваш email</label>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </section>
       </main>
