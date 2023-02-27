@@ -146,7 +146,7 @@ body {
   border: 1px solid;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   color: #777777;
   text-transform: uppercase;
   text-decoration: none;
@@ -156,6 +156,9 @@ body {
   border-radius: 5rem;
   position: relative;
   font-size: 2rem;
+  border: 1px solid;
+  cursor: pointer;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 .btn:hover {
   transform: translateY(-4px);
@@ -186,6 +189,13 @@ body {
   animation-name: BtnToUp;
   animation-duration: 2s;
   animation-fill-mode: backwards;
+}
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #BA8554;
+  color: white;
+}
+.btn_brown:hover::after {
+  background: #A14F03;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -456,7 +466,10 @@ body {
   padding-left: 5rem;
 }
 .form__group:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
 }
 .form__input {
   font-size: 1.6rem;
@@ -468,7 +481,7 @@ body {
   border: none;
   border-bottom: 0.2rem solid transparent;
   border-radius: 0.5rem;
-  width: 55%;
+  width: 70%;
 }
 .form__input:focus {
   outline: none;
@@ -496,6 +509,45 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-3rem);
+}
+.form__group-radio {
+  width: 40%;
+  display: inline-block;
+}
+.form__input-radio {
+  display: none;
+}
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 0.4rem;
+}
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  left: -3rem;
+  top: -0.4rem;
+}
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background: #A14F03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -50%);
+  opacity: 0;
+  transition: 0.2s;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
 }
 
 .section-about {
@@ -595,4 +647,27 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.footer {
+  padding: 8rem 0rem;
+  background: #333;
+}
+
+.row {
+  text-align: center;
+}
+
+.footer__links {
+  list-style: none;
+  display: inline-block;
+}
+.footer__links:not(:last-child) {
+  margin-right: 5rem;
+}
+
+.footer__link:link, .footer__link:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

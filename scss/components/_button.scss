@@ -2,13 +2,16 @@
 
 
 .btn {
-    &:link,&:visited {
+    &,&:link,&:visited {
         @include style-link($color-gray);        
         padding: 1.5rem 4rem;
         background-color: white;         
         border-radius: 5rem;
         position: relative;
-        font-size: 2rem;       
+        font-size: 2rem;
+        border: 1px solid;
+        cursor: pointer;
+        box-shadow: $box-shadow;       
     }
     &:hover {
         transform: translateY(-4px);
@@ -40,6 +43,17 @@
         animation-name: BtnToUp;
         animation-duration: 2s;
         animation-fill-mode: backwards;
+    }
+    &_brown {
+        &,&:link,&:visited {
+        background: $color-brown-light;
+        color: white;
+        }
+        &:hover {
+            &::after{
+                background: $color-brown-dark;         
+            }   
+        }
     }
 
 }
