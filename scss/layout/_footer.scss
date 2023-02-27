@@ -1,10 +1,22 @@
 .footer {
-    padding: 8rem 0rem;
+    padding: 5rem 0rem 0rem 0rem;
     background: #333;
+    .row {
+        height: 15rem;
+    }
 
 }
 .row {
-    text-align: center;
+    position: relative;
+    .footer__logo {
+        width: 12rem;
+        display: inline-block;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 .footer__logo {
 
@@ -13,20 +25,31 @@
 }
 .footer__links {
     list-style: none;
-    display: inline-block;
-    &:not(:last-child) {
-        margin-right: 5rem;
-    }
+    text-align: center;
+    
+
 }
 .footer__links-item {
-
-    
+    display: inline-block; 
+    margin-right: 5rem;
+    @include respond(tab-land) {
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }   
 }
 .footer__link {
     &:link,&:visited {
         text-decoration: none;
         text-transform: uppercase;
-        color: white;  
+        color: white;
+        line-height: 1.7;
     }
     
+}
+.footer__links {
+}
+.footer__links-item {
+}
+.footer__link {
 }
